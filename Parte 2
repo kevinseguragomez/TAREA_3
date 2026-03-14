@@ -1,0 +1,31 @@
+using System;
+class Program
+{
+    static int S(int a, int b) => a + b;
+    static int R(int a, int b) => a - b;
+    static int M(int a, int b) => a * b;
+    static int D(int a, int b) => a / b;
+
+    static void Main()
+    {
+        Console.Write("Primer número: "); 
+        int x = int.Parse(Console.ReadLine());
+        Console.Write("Segundo número: "); 
+        int y = int.Parse(Console.ReadLine());
+
+        Console.WriteLine("¿Qué operación quieres hacer?");
+        Console.Write("1=Sumar 2=Restar  3=Multiplicar  4=Dividir ");
+
+        string op = Console.ReadLine();
+
+        int respuesta = op switch
+        {
+            "1" => S(x, y),
+            "2" => R(x, y),
+            "3" => M(x, y),
+            "4" => D(x, y),
+        };
+
+        Console.WriteLine("La respuesta es: " + respuesta );
+    }
+}
