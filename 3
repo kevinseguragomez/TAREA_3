@@ -1,0 +1,27 @@
+using System;
+
+class Program
+{
+    static void Main() => Sumar();
+
+    static void Sumar()
+    {
+        try
+        {
+            Console.Write("Ingresa el primer número: "); 
+            int a = Convert.ToInt32(Console.ReadLine());
+            Console.Write("Ingresa el segundo número: "); 
+            int b = Convert.ToInt32(Console.ReadLine());
+
+            Console.WriteLine("La suma es: " + (a + b));
+        }
+        catch
+        {
+            Console.WriteLine("Error, solo puedes ingresa solo números enteros");
+        }
+        finally
+        {
+            Console.WriteLine("FIN");
+        }
+    }
+}
