@@ -1,0 +1,27 @@
+using System;
+
+class Program
+{
+    static void Main()
+    {
+        Console.WriteLine("¿Cuál es tu nombre?");
+        string nombre = Console.ReadLine();
+
+        Console.WriteLine("Dime tus ingresos del primer mes");
+        double ingresosPrimerMes = Convert.ToDouble(Console.ReadLine());
+
+        Console.WriteLine("Dime tus ingresos del segundo mes");
+        double ingresosSegundoMes = Convert.ToDouble(Console.ReadLine());
+
+        Console.WriteLine("Dime tus ingresos del tercer mes");
+        double ingresosTercerMes = Convert.ToDouble(Console.ReadLine());
+
+        double suma = ingresosPrimerMes + ingresosSegundoMes + ingresosTercerMes;
+        double promedio = suma / 3;
+
+        Console.WriteLine(nombre);
+        Console.WriteLine("Tu promedio de ingresos en los tres meses es: " + promedio);
+        Console.WriteLine("Tu suma de ingresos en los tres meses es: " + suma);
+    }
+
+}
