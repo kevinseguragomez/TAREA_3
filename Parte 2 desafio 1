@@ -1,0 +1,25 @@
+using System;
+
+class Program
+{
+    static string user = "";
+    static string pass = "";
+
+    static void Main()
+    {
+        Console.WriteLine(" Registro ");
+        Console.Write("Ingresa un usuario: "); 
+        user = Console.ReadLine();
+        Console.Write("Ingresa una contraseña:   "); 
+        pass = Console.ReadLine();
+
+        Console.WriteLine(" Acceso ");
+        Console.Write("Usuario: "); string u = Console.ReadLine();
+        Console.Write("Contraseña:   "); string p = Console.ReadLine();
+
+        if (u == user && p == pass)
+            Console.WriteLine("Bienvenido!");
+        else
+            Console.WriteLine("Credenciales incorrectas.");
+    }
+}
