@@ -1,0 +1,33 @@
+using System;
+
+class Program
+{
+    static int record = 0;
+    static string jugadorRecord = "";
+
+    static void Main()
+    {
+        Actualizar(120, "Ana");
+        record = 150;
+        jugadorRecord = "María";
+        Actualizar(120, "Ana");
+    }
+
+    static void Actualizar(int puntaje, string jugador)
+    {
+        if (puntaje > record)
+        {
+            record = puntaje;
+            jugadorRecord = jugador;
+            Console.WriteLine("¡Nueva puntuación!");
+            Console.WriteLine("Lograda por: " + jugador + " Puntos: " + puntaje);
+        }
+        else
+        {
+            Console.WriteLine("El récord más alto sigue en manos de " + jugadorRecord);
+            Console.WriteLine("Puntuación del récord: " + record);
+        }
+
+        Console.WriteLine("-------------------");
+    }
+}
